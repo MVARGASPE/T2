@@ -4,189 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TALLER JSFIDLE</title>
+    <title>T2</title>
 </head>
 
 <body>
     <div class="container">
-        <!-- aaaaaaaaaaaaaaaaaa -->
+
 
         <div class="card-deck">
 
-            <div class="card">
 
-                <div class="card-body">
 
-                    <h5 class="card-title">1.Sumar dos números e imprimir el resultado</h5>
-
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Identificar si una persona es mayor de edad</h5>
+                <div class="form-inline">
+                    <label for="">Por favor ingrese su edad</label>
+                    <input type="text" class="form-control" id="Edad">
                     <div class="form-inline">
-                        <label for="">Ingrese el Num 1</label>
-                        <input type="text" class="form-control" id="numberOne">
-                    </div>
-                    <div class="form-inline">
-                        <label for="">Ingrese el Num 2</label>
-                        <input type="text" class="form-control" id="numberTwo">
-                    </div>
-                    <div class="form-inline">
-                        <button class="btn btn-dark" onclick="calculate()">Calcular</button>
+                        <button class="btn btn-success" onclick="main()">Validar</button>
                     </div>
                     <div>
                         <span>Resultado : </span>
-                        <h5 id="result" class=""> </h5>
+                        <h5 id="result2" class=""> </h5>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">2. Identificar si una persona es mayor de edad</h5>
-                    <div class="form-inline">
-                        <label for="">Ingrese su edad</label>
-                        <input type="text" class="form-control" id="Edad">
-                        <div class="form-inline">
-                            <button class="btn btn-success" onclick="main()">Calcular</button>
-                        </div>
-                        <div>
-                            <span>Resultado : </span>
-                            <h5 id="result2" class=""> </h5>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">3.si un número ingresado desde el teclado es un número par o impar</h5>
-                    <div class="form-inline">
-                        <label for="">Ingrese el número</label>
-                        <input type="text" class="form-control" id="number">
-                        <div class="form-inline">
-                            <button class="btn btn-warning" onclick="main1()">Calcular</button>
-                        </div>
-                        <div>
-                            <span>Resultado : </span>
-                            <h5 id="result3" class=""> </h5>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
+    </div>
 
-        <div class="card-deck">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">4. Dados tres números calcular el mayor</h5>
-                    <div class="form-inline">
-                        <div class="form-inline">
-                            <label for="">Ingrese el número 1</label>
-                            <input type="text" class="form-control" id="num1">
-                        </div>
-                        <div class="form-inline">
-                            <label for="">Ingrese el número 2</label>
-                            <input type="text" class="form-control" id="num2">
-                        </div>
-                        <div class="form-inline">
-                            <label for="">Ingrese el número 3</label>
-                            <input type="text" class="form-control" id="num3">
-                        </div>
-                        <div class="form-inline">
-                            <button class="btn btn-danger" onclick="calcular()">Calcular</button>
-                        </div>
-                        <div>
-                            <span>Resultado : </span>
-                            <h5 id="result4" class=""> </h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">5. Sacar el factorial de un número</h5>
-                    <div class="form-inline">
-                        <label for="">Ingrese el número</label>
-                        <input type="text" class="form-control" id="numer">
-                        <div class="form-inline">
-                            <button class="btn btn-link" onclick="Eje5()">Calcular</button>
-                        </div>
-                        <div>
-                            <span>Resultado : </span>
-                            <h5 id="resultad" class=""> </h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">6. Determinar si un alumno aprueba o reprueba un curso, sabiendo que aprobara si su promedio de tres calificaciones es mayor o igual a 70; reprueba en caso contrario</h5>
-                    <div class="form-inline">
-                        <div class="form-inline">
-                            <label for="">Su nota 1</label>
-                            <input type="text" class="form-control" id="nume1">
-                        </div>
-                        <div class="form-inline">
-                            <label for="">Su nota 2</label>
-                            <input type="text" class="form-control" id="nume2">
-                        </div>
-                        <div class="form-inline">
-                            <label for="">Su nota 3</label>
-                            <input type="text" class="form-control" id="nume3">
-                        </div>
-                        <div class="form-inline">
-                            <button class="btn btn-info" onclick="calcula()">Calcular</button>
-                        </div>
-                        <div>
-                            <span>Resultado : </span>
-                            <h5 id="resul6" class=""> </h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
+    </div>
 
 </body>
 <script>
-    const inputNumberOne = document.getElementById("numberOne");
-    const inputNumberTwo = document.getElementById("numberTwo");
-    const h5Result = document.getElementById("result");
-
-    function calculate() {
-        const n1 = parseInt(inputNumberOne.value);
-        const n2 = parseInt(inputNumberTwo.value);
-        if (hasDataAnError(n1, n2)) {
-            onError();
-            return;
-        }
-        onSuccess(n1, n2);
-    }
-
-    function hasDataAnError(n1, n2) {
-        return !n1 || !n2;
-    }
-
-    function onError() {
-        h5Result.innerHTML = "ingrese datos validos";
-        h5Result.classList.add("text-danger");
-    }
-
-    function onSuccess(n1, n2) {
-        h5Result.innerHTML = add(n1, n2);
-        h5Result.classList.remove("text-danger");
-    }
-
-    function add(n1, n2) {
-        return n1 + n2;
-    }
-
     /*Ejercicio 2*/
     const edad = document.getElementById("Edad");
     const message = document.getElementById("result2");
@@ -204,7 +57,7 @@
 
     function error() {
 
-        message.innerHTML = "Ingrese datos validos";
+        message.innerHTML = "Por favor ingrese una edad valida";
         message.classList.add("text-danger");
     }
 
@@ -219,171 +72,14 @@
 
     function mayor(edad) {
         message.classList.remove("text-danger");
-        message.innerHTML = ` ${edad} Años, es mayor de edad`;
+        message.innerHTML = ` Tienes ${edad} años, eres mayor de edad`;
         message.classList.add("text-success");
     }
 
     function menor(edad) {
         message.classList.remove("text-danger");
-        message.innerHTML = ` ${edad} Años, es menor de edad`;
+        message.innerHTML = ` Tienes ${edad} años, eres menor de edad`;
         message.classList.add("text-info");
-
-    }
-
-    /*Ejercicio 3*/
-    const par = document.getElementById("number");
-    const resultado = document.getElementById("result3");
-
-    function main1() {
-        const n = parseInt(par.value);
-        if (!n) {
-            result3.innerHTML = `ingrese un dato valido`;
-        } else {
-            operation(n);
-        }
-    }
-
-    function operation(n) {
-
-        if (n % 2) {
-            impar(n)
-        } else {
-            par1(n);
-        }
-    }
-
-    function par1(n) {
-        result3.innerHTML = `El numero ${n} es par`;
-    }
-
-    function impar(n) {
-        result3.innerHTML = `El numero ${n} es impar`;
-
-    }
-
-
-    /*Ejercicio 4*/
-
-    const number1 = document.getElementById("num1");
-    const number2 = document.getElementById("num2");
-    const number3 = document.getElementById("num3");
-    const resultado4 = document.getElementById("result4");
-
-    function calcular() {
-        const n1 = parseInt(number1.value);
-        const n2 = parseInt(number2.value);
-        const n3 = parseInt(number3.value);
-
-        if (!n1 || !n2 || !n3) {
-            validation(n1, n2, n3);
-        } else {
-            Nmayor(n1, n2, n3);
-        }
-    }
-
-    function validation(n1, n2, n3) {
-
-        result4.classList.add("text-danger");
-
-        if (!n1) {
-
-            result4.innerHTML = "  "
-
-        } else if (!n2) {
-
-            result4.innerHTML = "  "
-        } else if (!n3) {
-            result4.innerHTML = " "
-        }
-    }
-
-    function Nmayor(n1, n2, n3) {
-
-        result4.classList.remove("text-danger");
-
-        let mayor = 0;
-
-        if (n1 > n2 && n1 > n3) {
-            mayor = n1
-        } else if (n2 > n1 && n2 > n3) {
-            mayor = n2
-        } else if (n3 > n1 && n3 > n2) {
-            mayor = n3
-        }
-        result4.innerHTML = `El número mayor es: ${mayor}`;
-        result4.classList.add("text-success");
-
-    }
-
-    /*Ejercicio 5*/
-
-    const numer = document.getElementById("numer");
-    const resultad = document.getElementById("resultad");
-
-    function Eje5() {
-        let num = parseInt(numer.value)
-        let factorial = 1;
-        for (i = 1; i <= num; i++) {
-            factorial = factorial * i;
-        }
-        resultad.innerHTML = `Factorial: ${factorial}`;
-    }
-
-
-    /*Ejercicio 6*/
-
-    const numer1 = document.getElementById("nume1");
-    const numer2 = document.getElementById("nume2");
-    const numer3 = document.getElementById("nume3");
-    const resultado6 = document.getElementById("resul6");
-
-    function calcula() {
-        const nu1 = parseInt(numer1.value);
-        const nu2 = parseInt(numer2.value);
-        const nu3 = parseInt(numer3.value);
-
-        if (!nu1 || !nu2 || !nu3) {
-            validation(nu1, nu2, nu3);
-        } else {
-            N(nu1, nu2, nu3);
-        }
-    }
-
-    function validation(n1, n2, n3) {
-
-        resul6.classList.add("text-danger");
-
-        if (!n1) {
-
-            resul6.innerHTML = "  "
-
-        } else if (!n2) {
-
-            resul6.innerHTML = "  "
-        } else if (!n3) {
-            resul6.innerHTML = " "
-        }
-    }
-
-    function N(nu1, nu2, nu3) {
-
-        resul6.classList.remove("text-danger");
-
-        let notas = 0;
-
-
-        if (nu1, nu2, nu3) {
-            notas = (nu1 + nu2 + nu3) / 3
-        }
-        if (notas >= 70) {
-
-            resul6.innerHTML = `Nota final: ${notas} Aprovado`;
-            resul6.classList.add("text-success");
-
-        } else(notas <= 70)
-        resul6.innerHTML = `Nota final: ${notas} Reprovado`;
-        resul6.classList.add("text-success");
-
 
     }
 </script>
